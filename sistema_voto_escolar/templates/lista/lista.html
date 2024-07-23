@@ -1,0 +1,47 @@
+{%extends 'base.html'%}
+
+{%block styles%}
+    <style>
+        .voto:hover{
+            background-color: rgb(188, 223, 187);
+            cursor: pointer;
+        }
+
+    </style>
+
+{%endblock%}
+
+{%block title%}Listas{%endblock%}
+
+
+{%block navbar%}
+    {%include 'components/navbar.html'%} 
+{%endblock%}
+
+
+
+{%block content%}
+<div class="alert alert-success text-center" role="alert">
+    <b>Bienvenido {{user.first_name}}</b>, aquí puedes verificar las listas participantes.
+</div>
+{%include 'components/card_lista.html'%}
+    
+
+{%endblock%}
+
+{% block scriptVoto %}
+ 
+<script>
+
+function voto(lista, estudianteId, listaId){
+    let darVoto = confirm('Estas seguro de dar tu voto por: '+ lista)
+
+    if (darVoto){
+        location.href = `/listas/?id_est=${estudianteId}&id_list=${listaId}`
+    }
+    alert(darVoto)
+}
+
+</script>
+
+{% endblock %}

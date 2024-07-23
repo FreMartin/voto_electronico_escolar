@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+
+{%block title%}Resultsdo{%endblock%}
+
+{%block navbar%}
+    {%include 'components/navbar.html'%} 
+{%endblock%}
+    
+
+{%block content%}
+<div class="alert alert-success text-center" role="alert">
+    <b>Bienvenido {{user.first_name}}</b>, aquí puedes verificar los resultados de las elecciones.
+</div>
+
+    {%include 'components/card_resultado.html'%}
+    
+
+{%endblock%}

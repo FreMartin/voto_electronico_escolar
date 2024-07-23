@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+
+{%block title%}Login{%endblock%}
+
+{%block navbar%}
+    {%include 'components/navbar.html'%} 
+{%endblock%}
+
+
+
+{%block content%}
+        <div class="col-md-6 border rounded mt-5 p-2">
+          <form method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="cedula" class="form-label">Usuario</label>
+              <input name="cedula" placeholder="Ingrese su usuario" type="text" class="form-control" id="cedula" aria-describedby="cedulalHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input name="password" placeholder="Ingrese su contraseña" type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary">Acceder</button>
+          </form>
+          {% if messages %}
+          <div class="alert alert-danger mt-3" role="alert">
+            {% for message in messages%}
+              {%if message.tags%}
+                {{message}}
+              {%endif%}
+            {%endfor%}
+          </div>
+          {%endif%}
+        </div>
+{%endblock%}

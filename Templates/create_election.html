@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Elección</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Sistema de Voto</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="admin-dashboard.html">Panel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2>Crear Nueva Elección</h2>
+        <form>
+            <div class="form-group">
+                <label for="electionName">Nombre de la Elección</label>
+                <input type="text" class="form-control" id="electionName" placeholder="Ingrese el nombre de la elección">
+            </div>
+            <div class="form-group">
+                <label for="startDate">Fecha de Inicio</label>
+                <input type="date" class="form-control" id="startDate">
+            </div>
+            <div class="form-group">
+                <label for="endDate">Fecha de Fin</label>
+                <input type="date" class="form-control" id="endDate">
+            </div>
+            <div class="form-group">
+                <label for="positions">Cargos Disponibles</label>
+                <input type="text" class="form-control" id="positions" placeholder="Ingrese los cargos separados por comas (e.g., Presidente, Secretario)">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Crear Elección</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

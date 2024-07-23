@@ -1,0 +1,17 @@
+<div class="card m-5 voto" style="max-width: 540px;"
+onclick="voto('{{lista}}', '{{estudiante.id}}', '{{lista.id}}', )">
+<div class="row g-0">
+  <div class="col-md-4">
+    {% if lista.foto %}
+    <img src="{{ lista.foto.url }}" class="img-fluid rounded-start" width="200" height="auto" alt="Imagen de {{ lista.nombre }}">
+    {% else %}
+    <img src="" class="img-fluid rounded-start" alt="No hay imagen para esta lista">
+    {% endif %}
+  </div>
+  <div class="col-md-8">
+    <div class="card-body">
+      <h5 class="card-title"></b></b>{{lista.nombre}}</h5>
+    </div>
+  </div>
+</div>
+</div>
